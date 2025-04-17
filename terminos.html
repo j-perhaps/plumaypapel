@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - Pluma & Papel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/terminos.css">
+
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <div class="terminos-container">
+        <h1>Términos y Condiciones</h1>
+        
+        <div class="seccion">
+            <h2>1. Servicios Ofrecidos</h2>
+            <p>Pluma & Papel ofrece servicios de apoyo académico que incluyen:</p>
+            <ul>
+                <li>Ayuda con tareas y proyectos escolares</li>
+                <li>Elaboración de resúmenes</li>
+                <li>Apoyo en investigaciones</li>
+                <li>Asesoría académica general</li>
+            </ul>
+        </div>
+
+        <div class="seccion">
+            <h2>2. Responsabilidades del Usuario</h2>
+            <p>Al utilizar nuestros servicios, el usuario se compromete a:</p>
+            <ul>
+                <li>Proporcionar información precisa sobre los requerimientos</li>
+                <li>Usar el material como apoyo y referencia</li>
+                <li>Respetar los plazos de entrega acordados</li>
+                <li>Realizar los pagos según lo acordado</li>
+            </ul>
+        </div>
+
+        <div class="seccion">
+            <h2>3. Política de Entregas</h2>
+            <p>Nos comprometemos a entregar los trabajos en los plazos acordados, manteniendo la calidad prometida.</p>
+        </div>
+
+        <div class="seccion">
+            <h2>4. Política de No Reclamaciones</h2>
+            <p>Al aceptar estos términos, el usuario reconoce y acepta que:</p>
+            <ul>
+                <li>Una vez entregado y aceptado el trabajo, no se admitirán reclamaciones posteriores</li>
+                <li>El usuario tiene 24 horas después de la entrega para solicitar ajustes menores</li>
+                <li>No se realizarán reembolsos después de iniciado el trabajo</li>
+                <li>El usuario acepta que el servicio es de apoyo académico y asume la responsabilidad del uso del material</li>
+            </ul>
+        </div>
+
+        <div class="importante">
+            <p><strong>Nota Importante:</strong> Nuestros servicios son de apoyo académico y no sustituyen la responsabilidad del estudiante en su proceso de aprendizaje.</p>
+        </div>
+
+        <div class="fecha-actualizacion">
+            <p>Última actualización: Marzo 2025</p>
+        </div>
+
+        <button class="btn-aceptar" onclick="aceptarTerminos()">Aceptar y Volver</button>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="js/load-components.js"></script>
+    <script>
+        function aceptarTerminos() {
+            if(window.opener && !window.opener.closed) {
+                // Si fue abierto desde otra ventana
+                window.opener.document.getElementById('aceptar-terminos').checked = true;
+                window.opener.document.getElementById('btn-whatsapp').disabled = false;
+                window.close();
+            } else {
+                // Si fue abierto directamente
+                window.location.href = 'ayuda.html';
+            }
+        }
+    </script>
+</body>
+</html>

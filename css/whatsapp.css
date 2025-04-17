@@ -1,0 +1,61 @@
+/* css/whatsapp.css */
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Cambiado de right a left */
+    background-color: #25d366; /* Color oficial de WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Efecto hover */
+.whatsapp-button:hover {
+    background-color: #128c7e; /* Color más oscuro al hacer hover */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animación de flotación */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.whatsapp-button {
+    animation: float 3s ease-in-out infinite; /* Aplica la animación */
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 15px;
+        left: 15px; /* Cambiado de right a left */
+    }
+}
+
+/* Estilo para la imagen dentro del botón */
+.whatsapp-button img {
+    width: 50px; /* Aumenta el tamaño de la imagen */
+    height: 50px;
+}

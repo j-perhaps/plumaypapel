@@ -1,0 +1,96 @@
+/* Header y navegación */
+.header-container {
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: var(--spacing-md) 0;
+  transition: all var(--transition-normal);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-secondary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.logo-icon {
+  margin-right: var(--spacing-sm);
+  font-size: 1.5em;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.menu-item {
+  font-weight: 500;
+  color: var(--color-text);
+  position: relative;
+  padding: var(--spacing-sm) var(--spacing-sm);
+  transition: all var(--transition-normal);
+}
+
+.menu-item i {
+  margin-right: var(--spacing-xs);
+}
+
+.menu-item:hover, .menu-item.active {
+  color: var(--color-primary);
+}
+
+.menu-item:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--transition-normal);
+}
+
+.menu-item:hover:after, .menu-item.active:after {
+  width: 100%;
+}
+
+.carrito-icon {
+  position: relative;
+}
+
+.carrito-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-circle);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--color-text);
+}

@@ -1,0 +1,155 @@
+/* css/responsive.css */
+
+/* Ajustes para pantallas pequeñas (hasta 768px, típico para tablets y móviles) */
+@media (max-width: 768px) {
+    /* Header */
+    .header {
+        padding: 1rem; /* Reducir padding */
+    }
+
+    .carousel-container {
+        height: 100px; /* Reducir altura del carrusel */
+        padding-bottom: 1rem;
+    }
+
+    .title {
+        font-size: 1.8rem; /* Reducir tamaño del título */
+    }
+
+    .slogan {
+        font-size: 1rem; /* Reducir tamaño del eslogan */
+        margin-top: 0.5rem;
+    }
+
+    .carousel-indicators {
+        bottom: 0.5rem; /* Acercar indicadores al contenido */
+    }
+
+    .indicator {
+        width: 0.5rem;
+        height: 0.5rem; /* Indicadores más pequeños */
+    }
+
+    /* Menú */
+    .menu ul {
+        flex-direction: column; /* Apilar ítems verticalmente */
+        gap: 1rem; /* Reducir espacio entre ítems */
+        padding: 0;
+    }
+
+    .menu a {
+        font-size: 1rem; /* Reducir tamaño de texto */
+        padding: 0.5rem 1rem; /* Ajustar padding */
+        display: block; /* Hacer que los enlaces ocupen todo el ancho */
+    }
+
+    /* Layout general (catalogo, ofertas, index) */
+    .catalogo-wrapper, .ofertas-wrapper, .index-wrapper {
+        flex-direction: column; /* Apilar sidebar y contenido */
+    }
+
+    .layout {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Sidebar */
+    #sidebar {
+        width: 100%; /* Ocupar todo el ancho */
+        position: static; /* Quitar posicionamiento fijo si lo tiene */
+    }
+
+    .toggle-sidebar {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    /* Sección de catálogo */
+    .seccion-catalogo {
+        width: 100%;
+    }
+
+    .cabecera-catalogo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buscador-contenedor {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .grid-productos {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    /* Sección de ofertas */
+    .ofertas-container {
+        padding: 1rem;
+    }
+
+    .carrusel-ofertas {
+        flex-direction: column; /* Apilar ítems del carrusel */
+    }
+
+    .carrusel-item {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .filtros-ofertas {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .filtros-categorias, .filtros-avanzados {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filtro-btn, select {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .grid-ofertas {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+
+    /* Botón de carrito */
+    .btn-carrito {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (hasta 480px, móviles pequeños) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem; /* Aún más pequeño */
+    }
+
+    .slogan {
+        font-size: 0.9rem;
+    }
+
+    .menu a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.5rem;
+    }
+
+    .producto, .oferta {
+        padding: 0.5rem;
+    }
+
+    .producto-imagen img, .oferta-imagen img {
+        width: 100%;
+        height: auto;
+    }
+
+    .btn-agregar, .btn-agregar-oferta {
+        width: 100%;
+        padding: 0.5rem;
+    }
+}

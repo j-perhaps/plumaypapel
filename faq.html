@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Pluma & Papel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&family=Lora:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">✏️📚</span>
+                    <span class="logo-text">Pluma & Papel</span>
+                </a>
+                <nav class="menu-container">
+                    <a href="index.html" class="menu-item active"><i class="fas fa-home"></i> Inicio</a>
+                    <a href="catalogo.html" class="menu-item"><i class="fas fa-book-open"></i> Catálogo</a>
+                    <a href="ayuda.html" class="menu-item"><i class="fas fa-tools"></i> Tareas al rescate</a>
+                    <a href="faq.html" class="menu-item"><i class="fas fa-paper-plane"></i> FAQ</a>
+             
+                </nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="faq-container">
+        <h1 class="faq-titulo">Preguntas Frecuentes (FAQ)</h1>
+
+        <!-- Buscador -->
+        <div class="faq-buscador">
+            <input type="text" id="buscador-faq" placeholder="🔍 Busca tu pregunta...">
+        </div>
+
+        <!-- Categorías de preguntas -->
+        <div class="faq-categorias">
+            <div class="categoria">
+                <h2><i class="fas fa-shopping-cart"></i> Compras y Reservas</h2>
+                <div class="pregunta">
+                    <button class="pregunta-titulo">¿Cómo acumulo puntos por compra?</button>
+                    <div class="pregunta-respuesta">Cada compra te da puntos automáticamente. ¡Compra, acumula y canjea! </div>
+                </div>
+
+                <div class="pregunta">
+                    <button class="pregunta-titulo">¿Puedo reservar un producto?</button>
+                    <div class="pregunta-respuesta">Sí, puedes reservar en tienda con un depósito del 50%.</div>
+                </div>
+            </div>
+
+            <div class="categoria">
+                <h2><i class="fas fa-money-bill-wave"></i> Pagos y Descuentos</h2>
+                <div class="pregunta">
+                    <button class="pregunta-titulo">¿Cómo se realiza el pago?</button>
+                    <div class="pregunta-respuesta">Todos los pagos son en tienda o en persona, en efectivo o transferencia.</div>
+                </div>
+                <div class="pregunta">
+                    <button class="pregunta-titulo">¿Cómo uso mis puntos?</button>
+                    <div class="pregunta-respuesta">
+                        <strong>Canjea tus puntos por:</strong>
+                        <ul>
+                            <li>100 puntos = 10 Bs de descuento</li>
+                            <li>200 puntos = 20 Bs de descuento</li>
+                        </ul>
+                        Además, recibirás notificaciones por WhatsApp cada vez que acumules puntos.  
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="categoria">
+                <h2><i class="fas fa-truck"></i> Entregas y Recogida</h2>
+                <div class="pregunta">
+                    <button class="pregunta-titulo">¿Hacen envíos nacionales?</button>
+                    <div class="pregunta-respuesta">No realizamos envíos a domicilio ni nacionales. Las entregas son en tienda</div>
+                </div>
+                <div class="pregunta">
+                    <button class="pregunta-titulo">¿Cuánto tarda la recogida?</button>
+                    <div class="pregunta-respuesta"> Si es algo sencillo, ¡puedes recogerlo el mismo día! Si es más complejo, en 1 o 2 días.</div>
+                </div>
+            </div>
+
+            <div class="categoria">
+                <h2><i class="fas fa-gift"></i> Servicios Adicionales</h2>
+                <div class="pregunta">
+                    <button class="pregunta-titulo">¿Ofrecen personalización?</button>
+                    <div class="pregunta-respuesta">Sí, algunos productos pueden personalizarse. Consulta en tienda o mandanos un mensaje al whatsapp.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Términos y Condiciones + Políticas de Privacidad -->
+        <div class="legal-container">
+            <div class="legal-seccion">
+                <h3>Términos y Condiciones</h3>
+                <p>Al usar nuestro sitio, aceptas:</p>
+                <ul>
+                    <li>Precios en Bs, sujetos a cambios.</li>
+                    <li>Pagos en tienda o en persona.</li>
+                    <li>Reservas con depósito del 50%.</li>
+                </ul>
+            </div>
+            <div class="legal-seccion">
+                <h3>Políticas de Privacidad</h3>
+                <p>Protegemos tus datos:</p>
+                <ul>
+                    <li>Solo usamos tu información para procesar pedidos.</li>
+                    <li>No compartimos datos con terceros sin consentimiento.</li>
+                    <li>Usamos cookies para mejorar la experiencia.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Botón de contacto -->
+        <div class="contacto-rapido">
+            <h3>¿Aún tienes dudas?</h3>
+            <p>Escríbenos por:</p>
+            <a href="https://wa.me/59175249275" class="contacto-link"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="mailto:j.plumaypapel@gmail.com" class="contacto-link"><i class="fas fa-envelope"></i> j.plumaypapel@gmail.com</a>
+            <p><i class="fas fa-map-marker-alt"></i> Visítanos: La Paz, Vino Tinto Anibal Aguilar 1114</p>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+    <div id="whatsapp-container"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>

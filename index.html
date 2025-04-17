@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pluma & Papel ✏️📚 - Tu Material Escolar Favorito</title>
+    <!-- Fuentes modernas de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS para animaciones al scroll -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+</head>
+<body>
+   
+
+<!-- Asegúrate de incluir Font Awesome -->
+<script src="https://kit.fontawesome.com/tu-código-de-kit.js" crossorigin="anonymous"></script>
+    <!-- Header con diseño moderno -->
+    <header class="header-container">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">✏️📚</span>
+                    <span class="logo-text">Pluma & Papel</span>
+                </a>
+                <nav class="menu-container">
+                    <a href="index.html" class="menu-item active"><i class="fas fa-home"></i> Inicio</a>
+                    <a href="catalogo.html" class="menu-item"><i class="fas fa-book-open"></i> Catálogo</a>
+                    <a href="ayuda.html" class="menu-item"><i class="fas fa-tools"></i> Tareas al rescate</a>
+                    <a href="faq.html" class="menu-item"><i class="fas fa-paper-plane"></i> FAQ</a>
+                
+                </nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Wrapper para contenido principal -->
+    <main class="container">
+        <section id="inicio" class="section">
+            <!-- Hero section mejorado -->
+            <div class="hero-section" data-aos="fade-up">
+                <div class="hero-content">
+                    <h1 class="hero-title">Donde los útiles escolares <span class="highlight">se vuelven útiles</span> de verdad 🚀</h1>
+                    <p class="hero-subtitle">Materiales tan cool que hasta tus profes querrán copiarte 😎</p>
+                    <div class="hero-buttons">
+                        <a href="catalogo.html" class="btn-primary">Ver catálogo <i class="fas fa-arrow-right"></i></a>
+                        <a href="#ofertas" class="btn-secondary">Ofertas del día (proximamente) <i></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/img/escolar1.jpg" alt="Ilustración de útiles escolares" class="floating">
+                </div>
+            </div>
+
+            <!-- Banner promocional con emojis -->
+            <div class="promo-banner" data-aos="fade-up">
+                <div class="emoji-bounce">🎉</div>
+                <p><strong>¡BOOM! 💥 OFERTA FLASH:</strong> 5% de descuento en todos los cuadernos y agendas hasta el fin de semana. ¡Corre que vuelan! 🏃‍♂️💨</p>
+                <div class="emoji-bounce">🎉</div>
+                <div class="countdown" id="oferta-countdown">
+                    <span class="countdown-item">
+                        <span class="countdown-value" id="countdown-days">0</span>
+                        <span class="countdown-label">Días</span>
+                    </span>
+                    <span class="countdown-item">
+                        <span class="countdown-value" id="countdown-hours">0</span>
+                        <span class="countdown-label">Horas</span>
+                    </span>
+                    <span class="countdown-item">
+                        <span class="countdown-value" id="countdown-minutes">0</span>
+                        <span class="countdown-label">Min</span>
+                    </span>
+                    <span class="countdown-item">
+                        <span class="countdown-value" id="countdown-seconds">00</span>
+                        <span class="countdown-label">Seg</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Categorías populares -->
+            <div class="section categories-section" data-aos="fade-up">
+                <h2 class="section-title"><i class="fas fa-star"></i> Categorías Populares <i class="fas fa-star"></i></h2>
+                <div class="categories-grid">
+                    <a href="catalogo.html?cat=cuadernos" class="category-card">
+                        <div class="category-icon"><i class="fas fa-book"></i></div>
+                        <h3>Cuadernos</h3>
+                        <p>Para tomar apuntes con estilo ✍️</p>
+                    </a>
+                    <a href="ayuda.html" class="category-card">
+                        <div class="category-icon"><i class="fas fa-headset"></i></div>
+                        <h3>¡Tareas al rescate!</h3>
+                        <p>¿Cansado de pelear con la tarea? ¡Tranquilo, nosotros la domamos por ti! 🎒😄</p>
+                    </a>
+                    <a href="catalogo.html?cat=lapices" class="category-card">
+                        <div class="category-icon"><i class="fas fa-pencil-alt"></i></div>
+                        <h3>Lápices</h3>
+                        <p>Porque a veces hay que borrar 😅</p>
+                    </a>
+                    <a href="catalogo.html?cat=tecnologia" class="category-card">
+                        <div class="category-icon"><i class="fas fa-calculator"></i></div>
+                        <h3>Tecnología</h3>
+                        <p>Para cuando fallan las matemáticas 🧮</p>
+                    </a>
+                </div>
+            </div>
+
+           
+
+            <!-- Ventajas con íconos animados -->
+            <div class="section ventajas-section" data-aos="fade-up">
+                <h2 class="section-title">Por qué elegirnos (además de porque somos geniales 😉)</h2>
+                <div class="ventajas-grid">
+                    <div class="ventaja-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="ventaja-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Envío Rápido 🚚💨</h3>
+                        <p>Más veloz que tú corriendo a la parada del bus. Entrega en 24h.</p>
+                    </div>
+                    <div class="ventaja-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="ventaja-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Calidad Premium ✨</h3>
+                        <p>Tan resistentes que sobrevivirán hasta a tu hermano pequeño.</p>
+                    </div>
+                    <div class="ventaja-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="ventaja-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <h3>Material Escolar a la Mano ✏️</h3>
+                        <p>Tan fácil de conseguir que hasta el profe olvidadizo querrá pedirnos prestado.</p>
+                    </div>
+                    <div class="ventaja-item" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="ventaja-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Atención 24/8 🎧</h3>
+                        <p>Disponibles siempre, como las excusas creativas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonios de clientes con humor -->
+            <div class="section testimonios-section" data-aos="fade-up">
+                <h2 class="section-title">Lo que dicen nuestros clientes (¡y no les pagamos, lo juramos! 🤞)</h2>
+                <div class="testimonios-carousel">
+                    <div class="testimonio-card active">
+                        <div class="testimonio-avatar">
+                            <img src="img/avatar1.jpg" alt="Avatar de cliente">
+                        </div>
+                        <div class="testimonio-estrellas">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <p class="testimonio-texto">"Desde que uso los cuadernos de Pluma & Papel, mis profesores pueden leer mi letra. No sé si eso es bueno o malo."</p>
+                        <p class="testimonio-autor">- María G., Estudiante de Secundaria</p>
+                    </div>
+                    <div class="testimonio-card">
+                        <div class="testimonio-avatar">
+                            <img src="img/avatar2.jpg" alt="Avatar de cliente">
+                        </div>
+                        <div class="testimonio-estrellas">
+                            ⭐⭐⭐⭐⭐
+                        </div>
+                        <p class="testimonio-texto">"Compré la mochila 'Indestructible' y sobrevivió a un semestre completo. Mi récord anterior era 2 semanas."</p>
+                        <p class="testimonio-autor">- Carlos P., Estudiante Universitario</p>
+                    </div>
+                    <div class="testimonio-card">
+                        <div class="testimonio-avatar">
+                            <img src="img/avatar3.jpg" alt="Avatar de cliente">
+                        </div>
+                        <div class="testimonio-estrellas">
+                            ⭐⭐⭐⭐
+                        </div>
+                        <p class="testimonio-texto">"Mi hijo dice que sus lápices son más cool que los de sus amigos. La paz mental no tiene precio."</p>
+                        <p class="testimonio-autor">- Luisa M., Madre aliviada</p>
+                    </div>
+                </div>
+                <div class="testimonio-controls">
+                    <button class="testimonio-prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonio-dots">
+                        <span class="testimonio-dot active"></span>
+                        <span class="testimonio-dot"></span>
+                        <span class="testimonio-dot"></span>
+                    </div>
+                    <button class="testimonio-next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- CTA divertido -->
+            <div class="section cta-section" data-aos="fade-up">
+                <div class="cta-container">
+                    <div class="cta-content">
+                        <h2 class="cta-title">¿Listo para revolucionar tu experiencia estudiantil? 🚀</h2>
+                        <p class="cta-text">O al menos tener los materiales más cool de la clase. Es un comienzo, ¿no?</p>
+                        <a href="catalogo.html" class="btn-cta">¡Quiero ser el favorito del profe! <i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                    <div class="cta-image">
+                        <img src="assets/img/material-escolar.jpg" alt="Ilustración divertida" class="floating">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog mini sección -->
+            <div class="section blog-section" data-aos="fade-up">
+                <h2 class="section-title">Tips & Tricks para sobrevivir al curso 📝</h2>
+                <div class="blog-grid">
+                    <a href="blog.html?post=1" class="blog-card">
+                        <div class="blog-img">
+                            <img src="assets/img/hq720.jpg" alt="Imagen de blog">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-tag">Consejos</span>
+                            <h3>10 excusas creativas que tus profesores (quizás) no han oído aún</h3>
+                            <p>La #7 te sorprenderá... ¡o te expulsará! 😱</p>
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> 15 Mar 2025</span>
+                        </div>
+                    </a>
+                    <a href="blog.html?post=2" class="blog-card">
+                        <div class="blog-img">
+                            <img src="assets/img/tecnicas-de-estudio-metodo.webp" alt="Imagen de blog">
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-tag">Organización</span>
+                            <h3>Cómo hacer que parezca que has estudiado (cuando claramente no lo has hecho)</h3>
+                            <p>Técnicas de organización que engañarán a todos 🤫</p>
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> 10 Mar 2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+           <!-- Formulario de suscripción -->
+<div class="section suscripcion-section" data-aos="fade-up">
+    <div class="suscripcion">
+        <div class="suscripcion-decoracion">
+            <i class="fas fa-envelope-open-text"></i>
+        </div>
+        <h2 class="section-title">¡No te pierdas nada! 📬</h2>
+        <p>Mándanos tu correo por WhatsApp y recibe ofertas exclusivas, tips de estudio y memes educativos. ¡Lo último es lo mejor!</p>
+        <form class="suscripcion-form" id="subscription-form" onsubmit="enviarAWhatsApp(event)">
+            <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo electrónico" id="email-input">
+            <button type="submit" class="whatsapp-btn">
+                <i ></i> Enviar por WhatsApp
+            </button>
+        </form>
+        <p class="suscripcion-disclaimer">* Prometemos no enviarte spam (bueno, no mucho 😜)</p>
+    </div>
+</div>
+
+<script>
+    function enviarAWhatsApp(event) {
+        event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+        const email = document.getElementById('email-input').value; // Obtiene el correo ingresado
+        const numeroWhatsApp = "1234567890"; // Cambia esto por tu número de WhatsApp (con código de país, sin +)
+        const mensaje = `Hola, quiero suscribirme con este correo: ${email}`; // Mensaje predefinido
+        const url = `https://wa.me/${59175249275}?text=${encodeURIComponent(mensaje)}`; // URL de WhatsApp
+        window.open(url, '_blank'); // Abre WhatsApp en una nueva pestaña
+    }
+</script>
+        </section>
+    </main>
+
+    <!-- Footer elegante y divertido -->
+ <div id="footer-container"></div>
+
+    <!-- Botón de WhatsApp flotante -->
+    <a href="https://wa.me/59175249275" class="whatsapp-button" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">¡Pregúntanos lo que sea! (excepto las respuestas del examen) 😜</span>
+    </a>
+
+    <!-- Notificación de cookies -->
+    <div class="cookie-notice" id="cookie-notice">
+        <p>🍪 Usamos cookies porque somos golosos y también para mejorar tu experiencia. <a href="cookies.html">Más información</a></p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="btn-cookie-accept">Aceptar</button>
+            <button id="reject-cookies" class="btn-cookie-reject">Rechazar</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/footer.js"></script>
+  
+ 
+    
+</body>
+</html>

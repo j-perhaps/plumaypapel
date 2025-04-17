@@ -1,0 +1,13 @@
+[
+    {
+      "name": "Hojas Boreal",
+      "description": "Con páginas que no se comen la tarea, ¡lo juramos! 😉",
+      "price": 40.00,
+      "category": "Hojas",
+      "icon": "📓",
+      "rating": 4,
+      "reviews": 124,
+      "tags": ["Resistente al café ☕", "Inmune a excusas 🙅‍♂️"],
+      "image": "assets/img/borealpapel.png"
+    }
+]

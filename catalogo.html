@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Útiles Escolares Divertidos! 🎒✏️</title>
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <header class="header-container">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">✏️📚</span>
+                    <span class="logo-text">Pluma & Papel</span>
+                </a>
+                <nav class="menu-container">
+                    <a href="index.html" class="menu-item active"><i class="fas fa-home"></i> Inicio</a>
+                    <a href="catalogo.html" class="menu-item"><i class="fas fa-book-open"></i> Catálogo</a>
+                    <a href="ayuda.html" class="menu-item"><i class="fas fa-tools"></i> Tareas al rescate</a>
+                    <a href="faq.html" class="menu-item"><i class="fas fa-paper-plane"></i> FAQ</a>
+                    <a href="carrito.html" class="menu-item carrito-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="carrito-count">0</span>
+                    </a>
+                    <a href="login.html" onclick="return showMessage(event);">
+                        <i class="fas fa-user-shield"></i>
+                    </a>
+                </nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>¡BIENVENIDO a nuestro catalogo! 😄</h1>
+            <p>Porque volver a clases no tiene que ser aburrido. ¡Haz que tus compañeros digan "WOW" con nuestros productos super cool! 🤩</p>
+            <div class="hero-buttons">
+                <a href="#categorias" class="btn-primary">¡Quiero ver! 👀</a>
+                
+            </div>
+            <div class="fun-fact">
+                <i class="fas fa-lightbulb"></i>
+                <p>¿Sabías que? Los estudiantes con útiles divertidos tienen 42% más probabilidades de ser populares en la escuela* <span class="small-text">*Según un estudio inventado por nuestro departamento de diversión 😜</span></p>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/img/material-escolar.jpg" alt="Útiles escolares divertidos">
+            <div class="image-bubble">¡Hola! ¡No puedo esperar a ser tuyo! 💖</div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Beneficios -->
+        <div class="benefits">
+            <div class="benefit-item">
+                <i class="fas fa-truck"></i>
+                <h3>Envío Gratis 🚚</h3>
+                <p>¡Porque gastar en envíos no mola! En compras +100Bs</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-medal"></i>
+                <h3>¡Calidad TOP! 🏆</h3>
+                <p>Tan buenos que tu profe te pedirá prestado</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-tag"></i>
+                <h3>Precios de amigos 👫</h3>
+                <p>Porque somos BFFs aunque no nos conozcamos</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-headset"></i>
+                <h3>Soporte 25/8 🦸‍♀️</h3>
+                <p>¡Sí! ¡Dormimos menos para ayudarte más!</p>
+            </div>
+        </div>
+
+        <!-- Títulos -->
+        <div class="titulo-container">
+            <h1 class="titulo-principal">¡El Catálogo Más Cool del Planeta! 🌍</h1>
+            <p class="subtitulo">Donde los útiles aburridos tienen prohibida la entrada 🚫😴</p>
+        </div>
+
+        <!-- Banner de promoción --
+        <div class="promo-banner">
+            <div class="promo-content">
+                <h3>¡SÚPER DESCUENTO INTERGALÁCTICO! 👽</h3>
+                <p>Usa el código <span class="code">SOYCOOL2025</span> y ¡BOOM! <span class="highlight">5% de descuento</span> en TODO. ¡Así de fácil!</p>
+                <button class="btn-copiar-codigo">¡Robar este código! 🏴‍☠️</button>
+                <p class="promo-small">Tranqui, es legal robarlo... ¡lo prometo! 😉</p>
+            </div>
+            <div class="promo-timer">
+                <p>¡Esta oferta se autodestruirá en:</p>
+                <div class="countdown">
+                    <div class="time-unit">
+                        <span id="dias">00</span>
+                        <span class="unit">días</span>
+                    </div>
+                    <div class="time-unit">
+                        <span id="horas">12</span>
+                        <span class="unit">horas</span>
+                    </div>
+                    <div class="time-unit">
+                        <span id="minutos">45</span>
+                        <span class="unit">min</span>
+                    </div>
+                    <div class="time-unit">
+                        <span id="segundos">20</span>
+                        <span class="unit">seg</span>
+                    </div>
+                </div>
+                <p class="countdown-msg">¡No seas lento como internet de biblioteca! 🐢</p>
+            </div>
+        </div>
+
+         Filtros y buscador -->
+        <div class="filtros-container">
+            <div class="buscador">
+                <button class="btn-buscar"><i class="fas fa-search"></i></button>
+                <input type="text" id="buscador" placeholder="¿Qué buscas, pequeño genio? 🔍">
+            </div>
+            <div class="filtros-avanzados">
+                <button class="btn-filtros">
+                    <i class="fas fa-magic"></i>
+                    Filtros ✨
+                </button>
+                <div class="filtros-dropdown" id="filtros-dropdown">
+                    <div class="filtro-grupo">
+                        <h4>¿Cuánto quieres gastar? 💰</h4>
+                        <div class="price-slider">
+                            <input type="range" min="0" max="1000" value="500" class="slider" id="price-range">
+                            <div class="price-values">
+                                <span>Bs 0 (Pobre de mí 😢)</span>
+                                <span id="price-value">Bs 500 (Normal 😊)</span>
+                                <span>Bs 1000 (¡Rico! 🤑)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filtro-grupo">
+                        <h4>¿Qué tipo de estudiante eres? 🎓</h4>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox"> Cuadernos (Para escritores en secreto 📝)
+                            </label>
+                            <label>
+                                <input type="checkbox"> Mochilas (Para llevar todo menos tarea 🎒)
+                            </label>
+                            <label>
+                                <input type="checkbox"> Lápices (Para dibujar en clase 🎨)
+                            </label>
+                            <label>
+                                <input type="checkbox"> Arte (Para el próximo Picasso 👨‍🎨)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filtro-grupo">
+                        <h4>¡Elige tu color favorito! 🌈</h4>
+                        <div class="color-selector">
+                            <div class="color-option" style="background-color: #FF5757;" data-tooltip="Rojo de superhéroe"></div>
+                            <div class="color-option" style="background-color: #4E54C8;" data-tooltip="Azul de sirena"></div>
+                            <div class="color-option" style="background-color: #00CFDD;" data-tooltip="Turquesa mágico"></div>
+                            <div class="color-option" style="background-color: #FFDE59;" data-tooltip="Amarillo Pikachu"></div>
+                            <div class="color-option" style="background-color: #20E3B2;" data-tooltip="Verde alien"></div>
+                            <div class="color-option" style="background-color: #FF8C00;" data-tooltip="Naranja espacial"></div>
+                        </div>
+                    </div>
+                    <div class="filtro-acciones">
+                        <button class="btn-aplicar-filtros">¡Aplicar! ✨</button>
+                        <button class="btn-limpiar-filtros">Ups, me equivoqué 🙈</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Categorías -->
+        <div id="categorias" class="categorias">
+            <button class="btn-categoria active">¡Todo! 🌟</button>
+            <button class="btn-categoria">Cuadernos 📓</button>
+            <button class="btn-categoria">Lápices ✏️</button>
+            <button class="btn-categoria">Mochilas 🎒</button>
+            <button class="btn-categoria">Arte 🎨</button>
+            <button class="btn-categoria">Escritura ✍️</button>
+            <button class="btn-categoria">Laminas Escolares 🤖</button>
+        </div>
+
+        <!-- Ordenar y vista -->
+        <div class="ordenar-container">
+            <div>
+                <span>Ordenar por:</span>
+                <select id="ordenar">
+                    <option value="relevancia">Lo más cool primero 😎</option>
+                    <option value="precio-asc">Precios para mi cochinito 🐷</option>
+                    <option value="precio-desc">Soy rico, lo más caro 💎</option>
+                    <option value="nombre">Alfabético (aburrido) 🔤</option>
+                    <option value="mas-vendidos">Lo que todos quieren 🔥</option>
+                </select>
+            </div>
+            
+        </div>
+
+      
+
+        
+        <a href="carrito.html" class="cart-button">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="tooltip">Ver carrito 🛒</span>
+        </a>
+    <!-- Contenedor para productos dinámicos -->
+    <div class="productos-dinamicos" id="productos-dinamicos"></div>
+
+    <!-- Footer de productos -->
+    <div class="productos-footer">
+        <button class="btn-cargar-mas">¡Muéstrame más tesoros escolares! 🏴‍☠️</button>
+        <p class="productos-count">Mostrando productos...</p>
+    </div>
+    <div id="footer-container"></div>
+    <!-- Después de tus otros scripts -->
+  <script src="js/productos.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/login.js"></script>
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+
+            let messageBox = document.getElementById('message-box');
+            if (!messageBox) {
+                messageBox = document.createElement('div');
+                messageBox.id = 'message-box';
+                document.body.appendChild(messageBox);
+            }
+
+            messageBox.innerHTML = `
+                🚨 ¿Seguro, segurito de entrar? 🚪 Esto es solo pa’ admins con poderes épicos 🦸‍♂️. 
+                Si no sos uno, ¡corrrré antes de que te atrape el bot guardián! 🤖👾 ¿Te la jugás? 😏
+                <div class="button-container">
+                    <button id="accept-btn" onclick="window.location.href='/login.html'">Aceptar</button>
+                    <button id="reject-btn" onclick="this.parentElement.parentElement.style.display='none'">Rechazar</button>
+                </div>
+            `;
+            messageBox.style.display = 'block';
+
+            return false;
+        }
+    </script>
+</body>
+</html>

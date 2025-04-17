@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Identifícate, Humano! 🔐 | Pluma & Papel</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Área de Login -->
+    <div class="login-container">
+        <div class="login-card">
+            <!-- Cabecera del Login -->
+            <div class="login-header">
+                <img src="/api/placeholder/150/150" alt="Logo Pluma & Papel" class="login-logo">
+                <h1>¡Alto ahí! 🛑</h1>
+                <h2>Zona Exclusiva de Superhéroes Administrativos</h2>
+                <p class="login-subtitle">Si no eres parte del equipo secreto, ¡huye mientras puedas! 🏃‍♂️💨</p>
+            </div>
+
+            <!-- Formulario de Login -->
+            <form class="login-form" action="admin.html" method="post">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user-ninja"></i> Nombre en Clave
+                    </label>
+                    <input type="text" id="username" name="username" placeholder="Introduce tu alias secreto..." required>
+                    <p class="input-tip">Pista: No es 'admin' ni '12345' 😉</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-key"></i> Palabra Mágica
+                    </label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Tu contraseña ultrasecreta..." required>
+                        <button type="button" class="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                    <p class="input-tip">Debe ser tan secreta como la receta de la abuela 👵</p>
+                </div>
+
+                <div class="form-group remember-me">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="checkbox-label">Recuérdame (porque tengo memoria de pez 🐠)</span>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-login">
+                        <i class="fas fa-door-open"></i> ¡Ábrete Sésamo!
+                    </button>
+                </div>
+
+                <div class="login-help">
+                    <a href="#" class="forgot-password">
+                        <i class="fas fa-question-circle"></i> ¿Olvidaste tu contraseña? (¡Qué desastre! 🤦‍♂️)
+                    </a>
+                </div>
+            </form>
+
+            <!-- Mensajes Divertidos Aleatorios -->
+            <div class="login-messages">
+                <div class="message-bubble">
+                    <i class="fas fa-lightbulb message-icon"></i>
+                    <p id="random-message">Consejo del día: Si escribes tu contraseña incorrectamente, nuestro hamster administrativo se enojará mucho. 🐹</p>
+                </div>
+            </div>
+
+            <!-- Intentos Fallidos (inicialmente oculto) -->
+            <div class="login-error" style="display: none;">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>¡Ups! Parece que tu cerebro está en modo vacaciones 🏝️. ¡Inténtalo de nuevo!</p>
+                <div class="security-theater">
+                    <div class="secure-progress">
+                        <div class="secure-bar"></div>
+                    </div>
+                    <p class="secure-text">Verificando si eres humano o un robot disfrazado... 🤖</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer del Login -->
+        <div class="login-footer">
+            <p>Pluma & Papel © 2025 - Todos los derechos reservados y algunos inventados</p>
+            <p class="login-joke">Si no puedes acceder después de varios intentos, prueba a encender el ordenador 💡</p>
+        </div>
+    </div>
+
+    <!-- Decoraciones Divertidas -->
+    <div class="floating-items">
+        <div class="floating-item" style="top: 15%; left: 10%;">✏️</div>
+        <div class="floating-item" style="top: 75%; left: 85%;">📓</div>
+        <div class="floating-item" style="top: 35%; left: 92%;">📝</div>
+        <div class="floating-item" style="top: 85%; left: 15%;">🖋️</div>
+        <div class="floating-item" style="top: 25%; left: 30%;">📚</div>
+    </div>
+
+    <!-- Modo Pánico (Botón para cerrar rápidamente cuando viene el jefe) -->
+    <button class="panic-button" title="¡Que viene el jefe!">
+        <i class="fas fa-bolt"></i>
+    </button>
+    <script src="/js/login.js"></script>
+</body>
+</html>

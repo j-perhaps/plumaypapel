@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Pluma & Papel</title>
+
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/carrito.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header mejorado con animación al hover -->
+    <header class="header-container">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">✏️📚</span>
+                    <span class="logo-text">Pluma & Papel</span>
+                </a>
+                <nav class="menu-container">
+                    <a href="index.html" class="menu-item"><i class="fas fa-home"></i> Inicio</a>
+                    <a href="catalogo.html" class="menu-item"><i class="fas fa-book-open"></i> Catálogo</a>
+                    <a href="ayuda.html" class="menu-item"><i class="fas fa-tools"></i> Tareas al rescate</a>
+                    <a href="faq.html" class="menu-item"><i class="fas fa-paper-plane"></i> FAQ</a>
+                </nav>
+                <div class="cart-icon">
+                    <a href="carrito.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </a>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Título de la página con un toque más divertido -->
+        <section class="titulo-container">
+            <h1 class="titulo-principal">¡Tu Carrito de Compras! 🛒</h1>
+            <p class="subtitulo">Revisa tus productos y completa tu compra</p>
+        </section>
+
+        <!-- Progreso de compra visual -->
+        <section class="checkout-progress">
+            <div class="progress-step active">
+                <div class="progress-icon"><i class="fas fa-shopping-cart"></i></div>
+                <span>Carrito</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="progress-icon"><i class="fas fa-address-card"></i></div>
+                <span>Datos</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="progress-icon"><i class="fas fa-money-bill-wave"></i></div>
+                <span>Pago</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step">
+                <div class="progress-icon"><i class="fas fa-check-circle"></i></div>
+                <span>Confirmación</span>
+            </div>
+        </section>
+
+        <!-- Contenido del carrito reorganizado -->
+        <section class="carrito-main-container">
+            <div class="carrito-productos-container">
+                <!-- Encabezado de tabla -->
+                <div class="carrito-header">
+                    <div class="header-producto">Producto</div>
+                    <div class="header-precio">Precio</div>
+                    <div class="header-cantidad">Cantidad</div>
+                    <div class="header-total">Total</div>
+                    <div class="header-acciones">Acciones</div>
+                </div>
+
+                <!-- Contenedor de items -->
+                <div class="carrito-items" id="carrito-items">
+                    <!-- Los items se cargarán dinámicamente desde carrito.js -->
+                    <div class="carrito-vacio" id="carrito-vacio">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>¡Tu carrito está más vacío que nevera de estudiante! 🙈</h3>
+                        <p>Ve a nuestro catálogo y añade productos increíbles.</p>
+                        <a href="catalogo.html" class="btn-primary">¡Quiero ver productos! 🛍️</a>
+                    </div>
+                </div>
+
+                <!-- Acciones del carrito -->
+                <div class="carrito-acciones">
+                    <div class="cupon-container">
+                        <input type="text" id="input-cupon" class="input-cupon" placeholder="Código de descuento">
+                        <button id="btn-aplicar-cupon" class="btn-aplicar-cupon">Aplicar</button>
+                    </div>
+                    <button id="btn-vaciar-carrito" class="btn-vaciar-carrito">
+                        <i class="fas fa-trash"></i> Vaciar carrito
+                    </button>
+                    <button id="btn-seguir-comprando" class="btn-seguir-comprando">
+                        <i class="fas fa-arrow-left"></i> Seguir comprando
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resumen y totales - Mejorado y más atractivo -->
+            <div class="totales-resumen">
+                <h3><i class="fas fa-receipt"></i> Resumen del pedido</h3>
+                
+                <div class="resumen-item">
+                    <span>Subtotal:</span>
+                    <span id="valor-subtotal" class="valor-subtotal">$0.00</span>
+                </div>
+                
+                <div class="resumen-item">
+                    <span>Envío:</span>
+                    <div class="envio-options">
+                        <select id="select-envio" class="select-envio">
+                            <option value="5.00">Adomicilio - Bs 5.00</option>
+                            <option value="00">mañanero - Bs 00.00</option>
+                            <option value="0">Recoger en tienda - Gratis</option>
+                        </select>
+                    </div>
+                    <span id="valor-envio" class="valor-envio">$50.00</span>
+                </div>
+                
+                <div class="resumen-item">
+                    <span>Descuentos:</span>
+                    <span id="valor-descuento" class="valor-descuento">-$0.00</span>
+                </div>
+                
+                <div class="resumen-item total">
+                    <span>Total:</span>
+                    <span id="valor-total" class="valor-total">$0.00</span>
+                </div>
+                
+                <!-- Botón de WhatsApp mejorado -->
+                <button id="btn-whatsapp-checkout" class="btn-whatsapp-checkout" disabled>
+                    <i class="fab fa-whatsapp"></i> ¡Comprar por WhatsApp!
+                </button>
+                
+                <div class="checkout-info">
+                    <div class="info-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <strong>Pago 100% seguro</strong>
+                            <p>Tus datos siempre protegidos</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-truck"></i>
+                        <div>
+                            <strong>Envío gratis en compras +Bs 100</strong>
+                            <p>Entregas en 24-48 horas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Métodos de pago aceptados -->
+                <div class="metodos-pago">
+                    <p>Aceptamos:</p>
+                    <div class="payment-icons">
+                        <i class="fas fa-money-bill-wave" title="Efectivo"></i>
+                        <i class="fas fa-university" title="Transferencia bancaria"></i>
+                     
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        
+        <!-- Nueva sección de revisiones de clientes -->
+        <section class="reviews-section">
+            <h2><i class="fas fa-star"></i> Lo que opinan nuestros estudiantes</h2>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"¡Estos productos salvaron mi semestre! La libreta mágica es increíble para organizar mis apuntes."</p>
+                    <div class="review-author">- Ana L., Estudiante de Diseño</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">"Envío súper rápido y productos de calidad. Me encanta el estuche expandible, cabe todo y más."</p>
+                    <div class="review-author">- Carlos M., Estudiante de Ingeniería</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"La atención al cliente es excepcional. Tuve un problema con mi pedido y lo resolvieron de inmediato."</p>
+                    <div class="review-author">- Sofía R., Estudiante de Medicina</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer mejorado -->
+    <div id="footer-container"></div>
+
+    <!-- Toast notifications container -->
+    <div id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/footer.js"></script>
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>

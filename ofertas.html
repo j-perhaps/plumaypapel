@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas Especiales - Pluma & Papel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&family=Lora:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+   
+   
+    <link rel="stylesheet" href="css/ofertas.css"> <!-- Movido al final -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    
+    <header class="header-container">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">✏️📚</span>
+                    <span class="logo-text">Pluma & Papel</span>
+                </a>
+                <nav class="menu-container">
+                    <a href="index.html" class="menu-item active"><i class="fas fa-home"></i> Inicio</a>
+                    <a href="catalogo.html" class="menu-item"><i class="fas fa-book-open"></i> Catálogo</a>
+                    <a href="ayuda.html" class="menu-item"><i class="fas fa-tools"></i> Tareas al rescate</a>
+                    <a href="faq.html" class="menu-item"><i class="fas fa-paper-plane"></i> FAQ</a>
+                
+                </nav>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="ofertas-wrapper">
+      
+        <div class="ofertas-container">
+            <h1 class="ofertas-titulo">🔥 Ofertas Especiales 🔥</h1>
+            <p class="ofertas-subtitulo">¡Descuentos que vuelan! ⏳⚡ ¡Atrápalos antes de que desaparezcan! 😱💥</p>
+            <!-- Resto del contenido igual -->
+            <div class="carrusel-ofertas">
+                <div class="carrusel-item">
+                    <img src="assets/img/regraso-clases.jpg" alt="Regreso a Clases">
+                    <div class="carrusel-info">
+                        <h3>Regreso a Clases</h3>
+                        <p>Hasta 30% OFF en útiles escolares</p>
+                    </div>
+                </div>
+                <div class="carrusel-item">
+                    <img src="assets/img/edicion-limitada.jpg" alt="Edición Limitada">
+                    <div class="carrusel-info">
+                        <h3>Edición Limitada</h3>
+                        <p>¡Solo 50 unidades disponibles!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="filtros-ofertas">
+                <div class="filtros-categorias">
+                    <button class="filtro-btn active" data-filtro="todos">Todos</button>
+                    <button class="filtro-btn" data-filtro="cuadernos">Cuadernos</button>
+                    <button class="filtro-btn" data-filtro="lapices">Lápices</button>
+                    <button class="filtro-btn" data-filtro="mochilas">Mochilas</button>
+                </div>
+                <div class="filtros-avanzados">
+                    <select id="filtro-precio">
+                        <option value="todos">Rango de precio</option>
+                        <option value="0-50">0 - 50 Bs</option>
+                        <option value="50-100">50 - 100 Bs</option>
+                        <option value="100+">100+ Bs</option>
+                    </select>
+                    <select id="filtro-descuento">
+                        <option value="todos">Porcentaje de descuento</option>
+                        <option value="10">10% o más</option>
+                        <option value="20">20% o más</option>
+                        <option value="30">30% o más</option>
+                    </select>
+                </div>
+            </div>
+            <div class="grid-ofertas">
+                <article class="oferta" data-categoria="cuadernos" data-precio="40" data-descuento="20">
+                    <div class="oferta-imagen">
+                        <img src="assets/img/cuaderno-oferta.jpg" alt="Cuaderno Premium">
+                        <span class="descuento">20% OFF</span>
+                    </div>
+                    <div class="oferta-info">
+                        <h3>Cuaderno Premium</h3>
+                        <p>100 hojas • Tapa dura</p>
+                        <span class="precio-anterior">50 Bs</span>
+                        <span class="precio-oferta">40 Bs</span>
+                        <div class="temporizador-oferta" data-fin="2025-03-10T23:59:59"></div>
+                        <button class="btn-agregar-oferta" data-id="o1" data-nombre="Cuaderno Premium" data-precio="40">Agregar al Carrito</button>
+                    </div>
+                </article>
+                <!-- Resto de las ofertas igual -->
+            </div>
+            <button id="ver-mas-ofertas" class="btn-ver-mas">Ver más ofertas</button>
+            <div class="notificaciones-recompensas">
+                <button id="btn-notificaciones" class="btn-notificaciones">Recibir alertas de nuevas ofertas</button>
+                <p class="recompensa">¡Compra por más de 100 Bs y recibe un regalo sorpresa!</p>
+            </div>
+            <div id="modal-notificaciones" class="modal">
+                <div class="modal-contenido">
+                    <span id="cerrar-modal" class="cerrar">×</span>
+                    <h3>Recibir Alertas</h3>
+                    <form id="form-notificaciones">
+                        <input type="email" id="email-notificaciones" placeholder="Tu correo electrónico" required>
+                        <button type="submit">Suscribirme</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botón de Carrito -->
+    <a href="carrito.html" class="btn-carrito">🛒 Ver Carrito</a>
+
+    <div id="footer-container"></div>
+    
+
+    <!-- Scripts -->
+    
+    <script src="js/footer.js"></script>
+   
+    <script src="js/ofertas.js"></script>
+   
+</body>
+</html>
